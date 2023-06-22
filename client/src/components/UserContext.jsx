@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import { differenceInCalendarDays, format } from "date-fns";
 
 export const UserContext = createContext({});
 

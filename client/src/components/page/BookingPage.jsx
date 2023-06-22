@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { differenceInCalendarDays, format } from "date-fns";
+import { differenceInCalendarDays } from "date-fns";
 import axios from "axios";
 import AddressLink from "../AddressLink";
 import PlaceGallery from "../PlaceGallery";
