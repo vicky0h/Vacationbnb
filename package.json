@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "homepage": "https://vicky0h.github.io/Vacationbnb",
+  "publish": "gh-pages -d src"
+}
