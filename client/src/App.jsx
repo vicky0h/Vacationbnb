@@ -13,7 +13,9 @@ import PlacePage from "./components/page/PlacePage";
 import BookingsPage from "./components/page/BookingsPage";
 import BookingPage from "./components/page/BookingPage";
 
-axios.defaults.baseURL = "http://localhost:4000";
+// baseURL: http://localhost:4000
+// baseURL: https://vacationbnb.onrender.com
+axios.defaults.baseURL = "https://vacationbnb.onrender.com";
 axios.defaults.withCredentials = true;
 
 function App() {
