@@ -11,6 +11,7 @@ const fs = require('fs');
 const User = require("./models/User");
 const Place = require("./models/Place");
 const Booking = require("./models/Booking");
+const mongoURL = `mongodb://kengtania:kengtania@ac-nvyooju-shard-00-00.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-01.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-02.5ypksw6.mongodb.net:27017/?ssl=true&replicaSet=atlas-76vlcv-shard-0&authSource=admin&retryWrites=true&w=majority`
 
 const bryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "bookingapp";
@@ -28,7 +29,8 @@ app.use(cors({
 }));
 
 
-mongoose.connect(process.env.MONGO_URL);
+// mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(mongoURL);
 
 function getUserDataFromReq(req) {
   return new Promise((resolve, reject) => {
