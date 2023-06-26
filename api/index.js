@@ -27,7 +27,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 // }));
 app.use(cors({
   credentials: true,
-  origin: 'https://vacationbnb.vercel.app/'
+  origin: 'https://vacationbnb.netlify.app/'
 }));
 
 
