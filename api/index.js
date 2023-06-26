@@ -25,7 +25,10 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 //     credentials: true,
 //     // origin: 'http://localhost:5173',
 // }));
-app.use(cors());
+app.use(cors({
+  credentials: true,
+  origin: 'https://vacationbnb.vercel.app/'
+}));
 
 
 mongoose.connect(process.env.MONGO_URL);
