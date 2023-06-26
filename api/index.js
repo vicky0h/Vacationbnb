@@ -11,7 +11,7 @@ const fs = require('fs');
 const User = require("./models/User");
 const Place = require("./models/Place");
 const Booking = require("./models/Booking");
-const mongoURL = `mongodb://kengtania:kengtania@ac-nvyooju-shard-00-00.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-01.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-02.5ypksw6.mongodb.net:27017/?ssl=true&replicaSet=atlas-76vlcv-shard-0&authSource=admin&retryWrites=true&w=majority`
+// const mongoURL = `mongodb://kengtania:kengtania@ac-nvyooju-shard-00-00.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-01.5ypksw6.mongodb.net:27017,ac-nvyooju-shard-00-02.5ypksw6.mongodb.net:27017/?ssl=true&replicaSet=atlas-76vlcv-shard-0&authSource=admin&retryWrites=true&w=majority`
 
 const bryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = "bookingapp";
@@ -24,13 +24,13 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173',
-    // origin: 'http://vacationbnb.vercel.app',
+    // origin: 'http://localhost:5173',
+    origin: 'http://vacationbnb.vercel.app',
 }));
 
 
-// mongoose.connect(process.env.MONGO_URL);
-mongoose.connect(mongoURL);
+mongoose.connect(process.env.MONGO_URL);
+// mongoose.connect(mongoURL);
 
 function getUserDataFromReq(req) {
   return new Promise((resolve, reject) => {
