@@ -27,7 +27,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 // }));
 app.use(cors({
   credentials: true,
-  origin: 'https://vacationbnb.netlify.app'
+  origin: 'https://64999dd1b00a0207c4ac1504--vacationbnb.netlify.app/'
 }));
 
 
