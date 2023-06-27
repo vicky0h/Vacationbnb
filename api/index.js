@@ -20,7 +20,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use('/uploads', express.static(__dirname + '/uploads'));
+// app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/uploads', express.static('https://github.com/vicky0h/Vacationbnb/edit/main/api' + '/uploads'));
 // app.use(cors({
 //     credentials: true,
 //     // origin: 'http://localhost:5173',
@@ -108,7 +109,8 @@ app.post('/upload-by-link', async (req,res) => {
     const newName = 'photo' + Date.now() + '.jpg';
     await imageDownloader.image({
       url: link,
-      dest: __dirname + '/uploads/' + newName,
+      // dest: __dirname + '/uploads/' + newName,
+      dest: 'https://github.com/vicky0h/Vacationbnb/edit/main/api' + '/uploads/' + newName,
     });
     res.json('uploads/' + newName);
 });
